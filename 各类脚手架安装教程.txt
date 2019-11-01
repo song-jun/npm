@@ -1,0 +1,57 @@
+淘宝镜像
+npm install -g cnpm --registry=https://registry.npm.taobao.org
+
+Vue CLI
+cnpm install -g @vue/cli
+# OR
+yarn global add @vue/cli
+创建项目
+vue create hello-world
+查看版本
+vue --version
+#OR
+vue -V
+
+create-react-app
+cnpm install -g create-react-app
+创建项目
+ create-react-app my-app
+创建config文件夹(必须首次运行,且没有改动文件,否则报错;如果报错,git add .一下，再commit，之后运行指令)
+npm run eject 
+
+全局安装或更新WePY命令行工具
+cnpm install wepy-cli -g
+创建项目
+wepy new myproject
+# 1.7.0之后的版本使用 wepy init standard myproject 初始化项目，使用 wepy list 查看项目模板
+开启实时编译
+wepy build --watch
+
+@angular/cli(4.0)
+cnpm install -g @angular/cli
+创建项目
+ng new angular-demo
+启动项目
+ng serve
+#OR
+npm start
+
+使用Git初始化项目
+ 1、在Git官网上点击New repository新建项目；
+ 2、在本地新建一个同名文件；
+ 3、打开git bash切换到新建的文件目录；
+ 4、echo "# myprojectname">>README.md; //新建一个README文件并写入内容
+ 5、git init //git初始化
+ 6、git add .将全部文件添加到git中；git add README.md 将README文件单独添加
+ 7、git commit - m "first commit" //添加提交时的注释
+ 8、git remote add origin git@github.com:whathave/myprojectname.git //将git进行远程连线
+ 9、git push -u origin master //推代码更新fork仓库
+问题收集
+git pull 失败 ,提示：fatal: refusing to merge unrelated histories
+办法：
+git pull origin master --allow-unrelated-histories
+后面加上 --allow-unrelated-histories ， 把两段不相干的 分支进行强行合并
+后面再push就可以了 git push gitlab master:init
+
+查看地址
+git remote -v
